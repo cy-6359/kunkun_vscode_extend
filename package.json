@@ -1,20 +1,21 @@
 {
-  "name": "cxk",
-  "displayName": "坤坤鼓励师",
+  "name": "ikunyyds",
+  "displayName": "坤坤の关怀",
   "description": "写代码不再孤单，坤坤与你同在",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "publisher": "cy-6359",
   "icon": "images/logo.jpg",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.30.0"
   },
   "categories": [
     "Other"
   ],
   "keywords": [
     "蔡徐坤",
-    "坤坤",
-    "只因"
+    "🐔你太美",
+    "鼓励",
+    "ikun"
   ],
   "bugs": {
     "url": "https://github.com/cy-6359/kunkun_vscode_extend/issues",
@@ -42,22 +43,22 @@
       "type": "object",
       "title": "鸡你太美",
       "properties": {
-        "ycy.reminderViewIntervalInMinutes": {
+        "cxk.reminderViewIntervalInMinutes": {
           "type": "number",
           "default": 60,
           "description": "展示提醒页面的时间间隔（分钟）"
         },
-        "ycy.title": {
+        "cxk.title": {
           "type": "string",
           "default": "小哥哥，小哥哥，代码写久了，坤坤提醒您该休息啦~",
           "description": "页面内展示文字"
         },
-        "ycy.type": {
+        "cxk.type": {
           "type": "string",
           "default": "default",
           "description": "类型：default:默认图；url：网络图"
         },
-        "ycy.customImages": {
+        "cxk.customImages": {
           "type": "array",
           "default": [
             "https://static.cy-monster.cn/vscode_extends/v2-5107f0a77c068936a01718c2555df046_hd.jpg"
@@ -75,7 +76,7 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.74.0",
+    "@types/vscode": "^1.30.0",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",

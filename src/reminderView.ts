@@ -35,19 +35,12 @@ export class ReminderView {
             <title>坤坤の关怀~</title>
         </head>
         <body>
-            <div><h1 style="width:70%;margin:0 auto;margin-top:5rem;text-align:center">坤坤提醒您，小哥哥写代码两小时啦，休息一下吧~</h1></div>
+            <div><h1 style="width:70%;margin:0 auto;margin-top:5rem;text-align:center">坤坤提醒您，小哥哥写代码累了吧，快休息一下吧~</h1></div>
             <div style="width:70%;margin:0 auto;margin-top:2rem;">
                  <img style="width:100%" src="${imagePath}">
-        
             </div>
         </body>
-        </html>
-        <script>
-        alert('ss')
-    
-        </script>
-        `;
-
+        </html>`;
         return html;
     }
 }

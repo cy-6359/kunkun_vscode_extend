@@ -23,13 +23,10 @@ export default class Asset {
         if (images.length === 0) {
             images = this.getDefaultImages();
         }
-        const a = [...(images as any[]).filter(item=>{
-            // console.log(item.path.toString().indexOf('.DS_Store') === -1);
+        const a = (images as any).filter((item:any)=>{
             return item.path.toString().indexOf('.DS_Store') === -1;
-        })];
+        });
         const image = this.getRandomOne(a);
-        
-        // console.log('images', a);
 
         return image;
     }
@@ -57,7 +54,7 @@ export default class Asset {
         return files;
     }
 
-    protected getDefaultYcyImagePath() {
+    protected getDefaultYcyImagePath() { 
         return path.join(this.context.extensionPath, 'images/cxk');
     }
 
