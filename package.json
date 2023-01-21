@@ -2,7 +2,7 @@
   "name": "ikunyyds",
   "displayName": "坤坤の关怀",
   "description": "写代码不再孤单，坤坤与你同在",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "cy-6359",
   "icon": "images/logo.jpg",
   "engines": {
@@ -50,13 +50,13 @@
         },
         "cxk.title": {
           "type": "string",
-          "default": "小哥哥，小哥哥，代码写久了，坤坤提醒您该休息啦~",
+          "default": "dd，小哥哥，代码写久了，坤坤提醒您该休息啦~",
           "description": "页面内展示文字"
         },
-        "cxk.type": {
+        "cxk.isDiy": {
           "type": "string",
-          "default": "default",
-          "description": "类型：default:默认图；url：网络图"
+          "default": "url",
+          "description": "类型：default:默认图；url：自定义网络图"
         },
         "cxk.customImages": {
           "type": "array",

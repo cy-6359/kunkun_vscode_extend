@@ -11,21 +11,30 @@ export default class Asset {
     }
 
     public getImageUri(): vscode.Uri | string {
+
+
         const type: string = this.getConfigType();
         let images: vscode.Uri[] | string[];
-
         if (type === this.TYPE_URL_IMAGE) {
+            console.log('1');
             images = this.getCustomImages();
         } else {
+            console.log('2');
             images = this.getDefaultImages();
         }
         // user forget setting customImages, get default images
         if (images.length === 0) {
             images = this.getDefaultImages();
         }
-        const a = (images as any).filter((item:any)=>{
-            return item.path.toString().indexOf('.DS_Store') === -1;
-        });
+        let a = images;
+        if(a instanceof Array){
+            a = (images as any).filter((item:any)=>{
+                if(item.path){
+                    return item.path.toString().indexOf('.DS_Store') === -1;
+                }
+                return item;
+            });
+        }
         const image = this.getRandomOne(a);
 
         return image;
@@ -60,7 +69,7 @@ export default class Asset {
 
 
     protected getConfigType(): string {
-        return Utility.getConfiguration().get<string>('type', 'default');
+        return Utility.getConfiguration().get<string>('isDiy', 'default');
     }
 
     protected getCustomImages() {
