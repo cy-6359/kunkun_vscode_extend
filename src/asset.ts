@@ -16,10 +16,8 @@ export default class Asset {
         const type: string = this.getConfigType();
         let images: vscode.Uri[] | string[];
         if (type === this.TYPE_URL_IMAGE) {
-            console.log('1');
             images = this.getCustomImages();
         } else {
-            console.log('2');
             images = this.getDefaultImages();
         }
         // user forget setting customImages, get default images
