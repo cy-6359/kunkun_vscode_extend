@@ -1,0 +1,90 @@
+{
+  "name": "cxk",
+  "displayName": "坤坤鼓励师",
+  "description": "写代码不再孤单，坤坤与你同在",
+  "version": "0.1.2",
+  "publisher": "cy-6359",
+  "icon": "images/logo.jpg",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "蔡徐坤",
+    "坤坤",
+    "只因"
+  ],
+  "bugs": {
+    "url": "https://github.com/cy-6359/kunkun_vscode_extend/issues",
+    "email": "635950334@qq.com"
+  },
+  "homepage": "https://github.com/cy-6359/kunkun_vscode_extend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cy-6359/kunkun_vscode_extend.git"
+  },
+  "activationEvents": [
+    "onCommand:cxk.showReminderView",
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cxk.showReminderView",
+        "title": "打开提醒页面",
+        "category": "cxk"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "鸡你太美",
+      "properties": {
+        "ycy.reminderViewIntervalInMinutes": {
+          "type": "number",
+          "default": 60,
+          "description": "展示提醒页面的时间间隔（分钟）"
+        },
+        "ycy.title": {
+          "type": "string",
+          "default": "小哥哥，小哥哥，代码写久了，坤坤提醒您该休息啦~",
+          "description": "页面内展示文字"
+        },
+        "ycy.type": {
+          "type": "string",
+          "default": "default",
+          "description": "类型：default:默认图；url：网络图"
+        },
+        "ycy.customImages": {
+          "type": "array",
+          "default": [
+            "https://static.cy-monster.cn/vscode_extends/v2-5107f0a77c068936a01718c2555df046_hd.jpg"
+          ],
+          "description": "用户设置图片地址"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
